@@ -845,7 +845,7 @@
     <div class="modal-card" style="max-width: 400px;">
       <div style="font-size: 42px; color: var(--accent); margin-bottom: 10px;"><i class="fa-solid fa-lock"></i></div>
       <h2 style="color: var(--primary); margin-bottom: 8px; font-size: 20px;">إعادة ضبط التحضير والمجموعات</h2>
-      <p style="font-size: 14px; font-weight: 700; color: #6b21a8; margin-bottom: 15px;">إدخال الرقم السري للضبط (1430):</p>
+      <p style="font-size: 14px; font-weight: 700; color: #6b21a8; margin-bottom: 15px;">إدخال الرقم السري للضبط (0000):</p>
       
       <input type="password" id="resetPinInput" placeholder="الرقم السري" style="width: 100%; padding: 12px; font-size: 18px; text-align: center; border: 2px solid #fbcfe8; border-radius: 10px; outline: none; margin-bottom: 15px;" maxlength="4">
       
@@ -926,7 +926,7 @@
 
     function verifyAndExecuteReset() {
       const pin = document.getElementById("resetPinInput").value;
-      if (pin === "1430") {
+      if (pin === "0000") {
         window.appState.attendance.forEach(s => s.group = null);
         window.appState.drawnTeams = [];
         saveDataToFirebase();
